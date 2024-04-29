@@ -1,0 +1,22 @@
+[
+  {
+    "index": 1,
+    "icon": "https://cryptologos.cc/logos/ethereum-eth-logo.png",
+    "networkName": "Ethereum",
+    "chainId": 11155111,
+    "symbol": "ETH",
+    "rpcUrl": "https://eth-sepolia.g.alchemy.com/v2/K4vv1RJUY4555MY8wZkSgGZ4EEgRoq2H",
+    "blockExplorerUrl": "https://sepolia.etherscan.io/",
+    "contractAddress": "0xB8BBA01A5f37A017Ec4F1Ac241A01F8D983ab6e7"
+  },
+  {
+    "index": 2,
+    "icon": "https://mumbai.polygonscan.com/assets/poly/images/svg/logos/chain-dim.svg?v=24.3.3.0",
+    "networkName": "Polygon",
+    "chainId": 80001,
+    "symbol": "MATIC",
+    "rpcUrl": "https://polygon-mumbai.g.alchemy.com/v2/GSP-XyoTPi7o7JTitZk260TjZ2t-HS6T",
+    "blockExplorerUrl": "https://mumbai.polygonscan.com",
+    "contractAddress": "0xa9744b02892e39bee4a9808efb8a3ae8ef270b6c"
+  }
+]
