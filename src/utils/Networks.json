@@ -6,7 +6,7 @@
     "chainId": 11155111,
     "symbol": "ETH",
     "rpcUrl": "https://eth-sepolia.g.alchemy.com/v2/K4vv1RJUY4555MY8wZkSgGZ4EEgRoq2H",
-    "blockExplorerUrl": "https://sepolia.etherscan.io/",
+    "blockExplorerUrl": "https://sepolia.etherscan.io/"
   },
   {
     "index": 2,
@@ -14,7 +14,7 @@
     "networkName": "Polygon",
     "chainId": 80001,
     "symbol": "MATIC",
-    "rpcUrl": "https://polygon-mumbai.g.alchemy.com/v2/HookGSRwkmVzXR62lWkS92sp_Rcck5ew",
-    "blockExplorerUrl": "https://mumbai.polygonscan.com",
+    "rpcUrl": "https://polygon-mumbai-pokt.nodies.app",
+    "blockExplorerUrl": "https://mumbai.polygonscan.com"
   }
 ]
