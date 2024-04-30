@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import ViewAccount from "../../../../components/Popups/components/Account.view";
 import useAccounts from "../../../../hooks/useAccounts";
 
-function SideMenu({ isOpen }) {
+function SideMenu() {
   const [isOpenViewAccount, setIsOpenViewAccount] = useState(false);
   const { getCurrentAccount } = useAccounts();
   const Navigate = useNavigate();
@@ -22,7 +22,7 @@ function SideMenu({ isOpen }) {
     Navigate("/lock");
   };
 
-  return isOpen ? (
+  return (
     <>
       <div className="w-[15pc] flex-col bg-onyx-900 top-[3.4pc] absolute shadow-massive-2 rounded-lg">
         <div
@@ -82,7 +82,7 @@ function SideMenu({ isOpen }) {
         forClose={setIsOpenViewAccount}
       />
     </>
-  ) : null;
+  );
 }
 
 export default SideMenu;
