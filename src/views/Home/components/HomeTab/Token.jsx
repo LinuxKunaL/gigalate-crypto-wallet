@@ -32,7 +32,7 @@ function Token() {
     import: false,
   });
   const reloadEffect = useSelector((state) => state.reloadUseEffect);
-  const { network } = JSON.parse(localStorage.getItem("gigalate.setting"));
+  const setting = JSON.parse(localStorage.getItem("gigalate.setting"));
   const { getCurrentAccount, getUserAccountsDataByAddress } = useAccounts();
   const [updateUseEffect, setUpdateUseEffect] = useState(1);
   const [listTokens, setListTokens] = useState();
@@ -46,10 +46,10 @@ function Token() {
 
       /* The above code is filtering an array of tokens based on the `chainId` property of each token.
      It is using the `filter` method to create a new array (`filterByChainId`) that only contains
-     tokens where the `chainId` matches the `chainId` of the `network` object (if `network` is not
+     tokens where the `chainId` matches the `chainId` of the `setting` object (if `setting` is not
      null or undefined). */
       const filterByChainId = result.tokens.filter(
-        (token) => token.chainId === network?.chainId
+        (token) => token.chainId === setting?.network?.chainId
       );
 
       const modifiedTokens = await Promise.all(
@@ -735,63 +735,6 @@ function ImportToken({ props }) {
           </Button>
         </div>
       </div>
-      {/* <div id="popUpAddToken" className="w-full absolute top-0 z-30 p-3">
-        <div className="h-full p-4 gap-6 flex flex-col  rounded-xl w-full bg-onyx-900 backdrop-blur-md shadow-massive-2">
-          <div className="flex gap-3 justify-between items-center ">
-            <h2 className="text-white/90 font-semibold text-lg">
-              Import tokens
-            </h2>
-            <div
-              onClick={() =>
-                document
-                  .getElementById("popUpAddToken")
-                  .classList.toggle("!flex")
-              }
-              className="inline-flex cursor-pointer items-center justify-center h-9 w-9  flex-col gap-1 text-base  text-center text-onyx-300 duration-500 ease-in-out transform border border-onyx-800 bg-onyx-900 rounded-xl shadow-massive-2 focus:outline-none focus:ring-2 hover:text-indigo-500 focus:ring-offset-2 focus:ring-onyx-300 hover:shadow-none focus:ring-offset-onyx-900"
-            >
-              <IoIosClose />
-            </div>
-          </div>
-          <div>
-            <p className="text-xs text-onyx-300s text-yellow-400/80 animate-pulse">
-              Would you like to import this token?
-            </p>
-          </div>
-          <div className="overflow-auto flex flex-col gap-4">
-            <div className="flex gap-3 items-center ">
-              <div className="bg-onyx-950 uppercase text-white  text-sm w-10 h-10 flex items-center rounded-full justify-center">
-                {tokenDetails?.symbol?.slice(0, 1)}
-              </div>
-              <div className="flex flex-col">
-                <span className="text-white font-semibold">
-                  {tokenDetails?.symbol}
-                </span>
-                <legend className="text-white/80 font-semibold">
-                  {tokenDetails?.forUserBalance} {tokenDetails?.symbol}
-                </legend>
-              </div>
-            </div>
-          </div>
-          <div className="flex gap-3">
-            <Button
-              type="secondary"
-              onClick={() =>
-                document
-                  .getElementById("popUpAddToken")
-                  .classList.toggle("!flex")
-              }
-              className="flex-1"
-              text="Cancel"
-            />
-            <Button
-              type="primary"
-              className="flex-1"
-              // onClick={importToken}
-              text="Import"
-            />
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }
