@@ -8,6 +8,7 @@ const accounts = Accounts();
 const { getUserAccountsDataByAddress } = accounts;
 
 const wallet = (_address) => {
+console.log(getUserAccountsDataByAddress(_address));
   const { encryptedPrivateKey } = getUserAccountsDataByAddress(_address);
   const key = Cookies.get("gigalate.key") || "demo";
   const { success, data } = decryption(encryptedPrivateKey, key);
