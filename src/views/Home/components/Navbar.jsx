@@ -46,7 +46,7 @@ function Navbar() {
         }
         className="absolute left-5"
       />
-      <SideMenu isOpen={isOpenSideMenu} />
+    {isOpenSideMenu ? <SideMenu /> : null}
       <div
         onClick={toggleSelectAccountPopUp}
         id="selectedUser"
