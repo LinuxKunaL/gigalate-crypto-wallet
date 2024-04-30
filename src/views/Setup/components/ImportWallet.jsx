@@ -15,17 +15,15 @@ import { setInitialAccounts } from "../../../functions/setAccountStates.js";
 function ImportWallet() {
   const Navigate = useNavigate();
   const { generateAvatar } = useGenerateAvatar();
-  const [seedPhrase, setSeedPhrase] = useState(
-    "budget mixed public exist brain night home illness witness scissors collect angry"
-  );
+  const [seedPhrase, setSeedPhrase] = useState("");
   const [loading, setLoading] = useState(false);
   const [isPasswordEye, setPasswordEye] = useState({
     one: false,
     two: false,
   });
   const [password, setPassword] = useState({
-    password: "1",
-    confirmPassword: "1",
+    password: "",
+    confirmPassword: "",
   });
 
   const passwordEye = (input, condition) => {
